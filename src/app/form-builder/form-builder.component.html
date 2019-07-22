@@ -1,0 +1,35 @@
+<p>
+  form-builder works!
+</p>
+
+<div>
+  <form [formGroup]="tourismForm" (ngSubmit)="onSubmit()" >
+    <div class="form-group">
+      <label>Place:</label>
+      <input type="text" class="form-control" formControlName="place"/>
+
+    </div>
+    <div class="form-group">
+        <label>Distance From:</label>
+        <input type="text" class="form-control" formControlName="distanceFrom"/>
+  
+      </div>
+
+      <div class="form-group">
+          <label>Distance To:</label>
+          <input type="text" class="form-control" formControlName="distanceTo"/>
+    
+        </div>
+
+        <div class="form-group">
+            <label>Famous For:</label>
+            <input type="text" class="form-control" formControlName="famousFor"/>
+      
+          </div>
+
+         
+            <button [disabled]="tourismForm.invalid" class="btn btn-success">Submit</button>
+          
+
+  </form>
+</div>

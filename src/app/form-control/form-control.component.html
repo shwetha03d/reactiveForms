@@ -1,0 +1,20 @@
+<p>
+  form-control works!
+</p>
+<div class="form-group">
+  <label>Institute:</label>
+  <input type="text" class="form-control" [formControl]="institute" />
+  <div *ngIf="institute.invalid && (institute.touched ||institute.dirty)">
+  <div *ngIf="institute.errors.required" class="text-danger">Institute is required</div>
+  <div *ngIf="institute.errors.minlength" class="text-danger">Min 3 characters required</div>
+</div>
+</div>
+
+<div class="form-group">
+  <button class="btn btn-primary" (click)="onClick()">Update</button><br><br>
+  <button class="btn btn-primary" (click)="onSync()">Sync</button>
+  
+</div>
+TO DO Remove:{{debug}}
+<br><br>
+TO DO Remove Message:{{message}}
